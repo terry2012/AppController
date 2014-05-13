@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AppController</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="launchcontrol">Launch Periodically App Control!</string>
+	<string name="stopcontrol">Stop Periodically App Control</string>
+	<string name="appcontrollerparameters">AppController Parameters</string>
+	<string name="targetappparameters">Target App Control Parameters</string>
+	<string name="configurationfiletext">AppController Configuration File:</string>
+	<string name="loadconfigurationfile">Load</string>
+	<string name="saveconfigurationfile">Save</string>
+	<string name="browsefile">Choose File</string>
+	<string name="configurationinputhint">Enter AppController Configuration File</string>
+
+</resources>
