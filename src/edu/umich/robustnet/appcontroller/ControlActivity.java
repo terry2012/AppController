@@ -96,8 +96,10 @@ public class ControlActivity extends Activity {
     Button browsefile;
     final int ACTIVITY_CHOOSE_FILE = 1;
     final int SUMSUNG_FILE_REQUEST_CODE = 6384;
-    int tcpdumpTrunk=120;
+    int tcpdumpTrunk=0;
     //default: 0
+    int DEFAULT_TRUNK=0; //no truncate
+    int VIDEO_TRUNK=500;
     
     Button loadconfigurationfile;    
     Button saveconfigurationfile;
@@ -1194,6 +1196,12 @@ public class ControlActivity extends Activity {
     			installTCPDump();    			
     			Process sh = Runtime.getRuntime().exec("su");		    
 				DataOutputStream os = new DataOutputStream(sh.getOutputStream());
+				
+				//set truncate data
+				tcpdumpTrunk=DEFAULT_TRUNK;
+				if (appName.equals("YouTube")) 
+					tcpdumpTrunk=VIDEO_TRUNK;
+				
 				String Command = INTERNAL_DATA_PATH+"/"+tcpdumpfile+" -s "+tcpdumpTrunk+" -w "+outputfoldername+"/traffic.cap\n";
 		  //      Process sh = Runtime.getRuntime().exec(Command);		    
 		        Log.d(TAG, Command);
